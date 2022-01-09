@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+body {
+  font-family: THSarabunNew, Tahoma, Loma, "Times New Roman", Times, serif;
+  font-size: 10pt;
+  line-height: 2em;
+  position: relative;
+}
+body .page {
+  display: block;
+  margin: 0 auto;
+  padding: 10mm;
+  background-color: #fff;
+  page-break-before: always;
+}
+@media screen {
+  body {
+    background-color: #ddd;
+  }
+  body .page {
+    min-height: 297mm;
+    width: 210mm;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  body.landscape .page {
+    width: 297mm;
+    min-height: 210mm;
+  }
+  a.icon-print {
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #888;
+    font-size: 30px;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 50em;
+    -moz-border-radius: 50em;
+    -webkit-border-radius: 50em;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  a.icon-print:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000;
+  }
+  a.icon-print:before {
+    margin: 0;
+  }
+}
+@media print {
+  body .page {
+    size: 210mm 297mm;
+  }
+  body.landscape .page {
+    size: 297mm 210mm landscape;
+  }
+  .no-print,
+  a.icon-print {
+    display: none;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+h1 {
+  font-size: 1.2em;
+}
+.splitpage {
+  page-break-before: always;
+  margin: 0;
+}
+body>table {
+  margin: 0 auto;
+  width: 800px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 5px;
+}
+.detail td,
+.border,
+table,
+td,
+th {
+  border-color: #000;
+  border-width: 1px;
+}
+.detail td,
+.border {
+  border-style: none solid solid solid;
+}
+.border.all {
+  border-style: solid;
+}
+.border.top {
+  border-style: solid;
+}
+th {
+  background-color: #666666;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-style: solid;
+}
+td {
+  vertical-align: top;
+  text-align: left;
+}
+.detail td,
+.detail th {
+  vertical-align: middle;
+}
+.label {
+  background-color: #ddd;
+}
+.amount,
+.price,
+.quantity,
+.discount,
+.item {
+  width: 15%;
+}
+table tr>td.amount,
+table tr>td.price {
+  text-align: right;
+}
+table tr>td.description {
+  text-align: left;
+}
+table tr>td.quantity,
+table tr>td.item,
+table tr>td.discount {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.bottom {
+  vertical-align: bottom;
+}
+.bold {
+  font-weight: bold;
+}
+[class^="line"] {
+  display: inline;
+  padding: 0 1em;
+  border-bottom: 1px dotted #000;
+  min-width: 10em;
+  line-height: 1;
+  overflow: hidden;
+}
+.line1 {
+  min-width: 20%;
+  display: inline-block;
+}
+.line2 {
+  min-width: 30%;
+}
+.line3 {
+  min-width: 40%;
+}
+.line4 {
+  min-width: 50%;
+}
+.line5 {
+  min-width: 150px;
+}
+.line6 {
+  display: inline;
+}
